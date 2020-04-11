@@ -2,6 +2,8 @@ package com.daniel.nbaapi.model;
 
 import java.util.Date;
 import java.util.UUID;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,7 +19,7 @@ public class Player {
     private Date birthDate;
     private String college;
 
-    public Player(UUID id, String name){
+    public Player(@JsonProperty("id") UUID id, @JsonProperty("name") String name){
         this.id = id;
         this.name = name;
     }
