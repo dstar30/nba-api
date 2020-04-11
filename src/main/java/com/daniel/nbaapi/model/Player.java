@@ -7,10 +7,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.validation.constraints.NotBlank;
+
 @Getter
 @Setter
 public class Player {
     private final UUID id;
+    @NotBlank
     private final String name;
     private int yearStart;
     private int yearEnd;
